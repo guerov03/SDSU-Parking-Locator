@@ -20,7 +20,7 @@ A small class project to show SDSU parking lot availability.
 ```bash
 git clone https://github.com/<guerov03>/SDSU-Parking-Locator.git
 cd SDSU-Parking-Locator
-
+```
 ## Updating project (after first clone)
 
 ### GitHub Desktop
