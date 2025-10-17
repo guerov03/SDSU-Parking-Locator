@@ -21,3 +21,13 @@ A small class project to show SDSU parking lot availability.
 git clone https://github.com/<guerov03>/SDSU-Parking-Locator.git
 cd SDSU-Parking-Locator
 
+## Updating project (after first clone)
+
+### GitHub Desktop
+- Open GitHub Desktop
+- Click **Fetch origin** (top bar)
+- If new commits exist, click **Pull origin**
+
+### Command Line
+```bash
+git pull
