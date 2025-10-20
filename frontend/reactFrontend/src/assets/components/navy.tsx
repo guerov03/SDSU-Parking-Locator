@@ -1,13 +1,15 @@
+import { Link } from 'react-router-dom';
+
 export const Navy = () => {
   return (
     <nav className="navbar">
-        <div className="title">SDSU Parking Locator</div>
-        <div>
-          <a href="#home">Home</a>
-          <a href="#home">Map</a>
-          <a href="#about">About</a>
-          <a href="#home">Profile</a>
-        </div>
-      </nav>
-    );
-}
+      <div className="title">SDSU Parking Locator</div>
+      <div>
+        <Link to="/">Home</Link>
+        <Link to="/map">Map</Link>
+        <Link to="/about">About</Link>
+        <Link to="/profile">Profile</Link>
+      </div>
+    </nav>
+  );
+};
