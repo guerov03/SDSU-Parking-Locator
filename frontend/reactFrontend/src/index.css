@@ -1,3 +1,4 @@
+@import url("leaflet/dist/leaflet.css");
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -11,6 +12,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+html, body, #root, .home-container {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
 a {
@@ -65,4 +72,40 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* --------------------Nav------------------------------ ------------*/
+.navbar {
+  background-color: #222;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Navbar title */
+.navbar .title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Navbar links */
+.navbar a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: rgb(203, 199, 199);
+  text-decoration: none;
+}
+
+.navbar a:last-child {
+  margin-right: 0;
+}
+
+/* Page content */
+.page-content {
+  padding: 20px;
 }
