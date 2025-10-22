@@ -3,6 +3,7 @@ package edu.sdsu.parking_backend;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+import jakarta.persistence.Transient;
 
 @Component
 public class Staff extends User {
@@ -10,7 +11,8 @@ public class Staff extends User {
     private static final Logger log = LoggerFactory.getLogger(Staff.class);
 
     private String staffID;
-    private final ParkingLotService parkingLotService;
+    @Transient
+    private transient final ParkingLotService parkingLotService;
 
     public Staff(ParkingLotService parkingLotService) {
         this.parkingLotService = parkingLotService;

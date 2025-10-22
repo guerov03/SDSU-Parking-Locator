@@ -4,10 +4,13 @@ import java.util.*;
 
 import jakarta.persistence.Id;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Table(name = "app_user") // avoid reserved table name "user"
 @NoArgsConstructor
 @Data
 public abstract class User 
@@ -22,7 +25,8 @@ public abstract class User
     private String role;
     private boolean isLoggedIn = false;
     public boolean isLoggedIn() { return isLoggedIn; }
-    Scanner scanner = new Scanner(System.in);
+    @Transient
+    private transient java.util.Scanner scanner = new java.util.Scanner(System.in);
 
     void login() {
 

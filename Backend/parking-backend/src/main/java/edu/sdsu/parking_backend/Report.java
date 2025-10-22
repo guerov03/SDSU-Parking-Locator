@@ -1,6 +1,7 @@
 package edu.sdsu.parking_backend;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import java.time.LocalDateTime;
 import jakarta.persistence.Entity;
@@ -9,6 +10,7 @@ import jakarta.persistence.Id;
 @Entity // This class rep a table in the database
 @Data 
 @AllArgsConstructor
+@NoArgsConstructor  
 
 public class Report
 {
