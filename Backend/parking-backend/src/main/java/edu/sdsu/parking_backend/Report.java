@@ -21,6 +21,7 @@ public class Report
     private String statusReported;    // Status of user who reported (i.e. Full, Almost full, empty)
     private LocalDateTime timeStamp;  // date and time of report
     private boolean isVerified;       // flag to track if an admin verfied the report 
+    private int ReportedOccupanacy;
 
     public Report (int reportID, int userID, String statusReported)
     { // gen a new report

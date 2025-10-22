@@ -30,7 +30,7 @@ public class MapService
     public void highlightLot(ParkingLot lot)
     {
         // Place holder logic: print msg to indicate which lot is being highlighted
-        System.out.println("Highlighting " + lot.getNameLot() + " on the map!");
+        System.out.println("Highlighting " + lot.getLotName() + " on the map!");
     }
 
     /* 
@@ -40,6 +40,6 @@ public class MapService
     public void navigateGate(ParkingLot lot)
     {
          // Placeholder logic to stimulate gen a route
-        System.out.println("Generating navigation route to " + lot.getNameLot());
+        System.out.println("Generating navigation route to " + lot.getLotName());
     }
 }

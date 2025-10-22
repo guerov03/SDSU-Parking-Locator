@@ -18,12 +18,12 @@ public class UserService {
         private static final Map<String, User> usersByEmail = new ConcurrentHashMap<>();
 
         public void register(User user) {
-            if (user == null || user.userEmail == null) {
+            if (user == null || user.email == null) {
                 log.warn("Refusing to register null user or user with null email");
                 return;
             }
-            usersByEmail.put(user.userEmail, user);
-            log.info("Registered user {}", user.userEmail);
+            usersByEmail.put(user.email, user);
+            log.info("Registered user {}", user.email);
         }
 
         public static boolean deleteByEmail(String email) {
