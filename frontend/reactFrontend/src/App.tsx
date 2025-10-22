@@ -10,7 +10,7 @@ import { Navy } from './assets/components/navy';
 
 function App() {
   return (
-    <div style={{ padding: "2rem", maxWidth: "1000px", margin: "0 auto" }}>
+    <div >
       <Navy />
 
       {/* --- Page Routing --- */}
@@ -30,6 +30,7 @@ function App() {
                 <ParkingLotList />
                 <ReportForm />
               </section>
+              <div></div>
             </>
           }
         />

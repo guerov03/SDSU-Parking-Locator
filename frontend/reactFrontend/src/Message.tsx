@@ -1,6 +1,6 @@
 function Message() {
-  const name = "hello";
-  return <h1>Hello, {name}!</h1>;
+  const name = "Here to help you find parking urgently";
+  return <h1 className="msg-title">{name}</h1>;
 }
 
 export default Message;
