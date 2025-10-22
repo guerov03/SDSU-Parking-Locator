@@ -1,8 +1,10 @@
 package edu.sdsu.parking_backend;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Transient;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -18,6 +20,7 @@ public class Student extends User
 {
     private String studentID;
     private String carInfo;
-    private final ParkingLotService parkingLotService;
+    @Transient
+    private transient final ParkingLotService parkingLotService;
 }
 

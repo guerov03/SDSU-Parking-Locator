@@ -3,6 +3,7 @@ package edu.sdsu.parking_backend;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+import jakarta.persistence.Transient;
 
 @Component
 public class Admin extends User {
@@ -10,7 +11,8 @@ public class Admin extends User {
     private static final Logger log = LoggerFactory.getLogger(Admin.class);
 
     private String adminID;
-    private final ParkingLotService parkingLotService;
+    @Transient
+    private transient final ParkingLotService parkingLotService;
     private final AnalyticsService analyticsService;
 
     public Admin(ParkingLotService parkingLotService, AnalyticsService analyticsService) {
