@@ -2,6 +2,7 @@ package edu.sdsu.parking_backend;
 
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.Map;
 
 @RestController         // handle web req
 @RequestMapping("/api") // every endpoint url start with "/api"
@@ -9,9 +10,10 @@ import java.util.List;
 public class ParkingLotController 
 {
     private final ParkingLotRepo parkingLotRepo;
+    private final ParkingLotService parkingLotService;
 
-    public ParkingLotController(ParkingLotRepo parkingLotRepo)
-    {this.parkingLotRepo = parkingLotRepo;}
+    public ParkingLotController(ParkingLotRepo parkingLotRepo, ParkingLotService parkingLotService)
+    {this.parkingLotRepo = parkingLotRepo; this.parkingLotService = parkingLotService;}
 
     // ENDPOINTS:
 
@@ -22,4 +24,11 @@ public class ParkingLotController
     @GetMapping("/lots/{id}")
     public ParkingLot getLotById(@PathVariable int id) 
     {return parkingLotRepo.findById(id).orElse(null);} // search for a parking lot with the specific id#
+
+    // flips FULL/NOT FULL and records a timestamp
+    @PostMapping("/lots/{id}/occupied")
+    public Map<String, Object> updateOccupied(@PathVariable int id, @RequestParam int occupied) {
+        boolean ok = parkingLotService.updateOccupied(id, occupied);
+        return Map.of("ok", ok);
+    }
 }
