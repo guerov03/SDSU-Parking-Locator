@@ -10,9 +10,8 @@ Prereqs:
 
 Scaffold (first time):
 - use Spring Initializr
-  - Group: edu.sdsu
   - Artifact: parking-backend
-  - Dependencies: Spring Web, Lombok (opt), Spring Security (later)
+  - Dependencies: Spring Web
 - move project into /backend
 
 Run (dev):
@@ -37,4 +36,3 @@ Notes:
 - do not commit target/
 - do not commit secrets
 - use .env.example for samples
-- branch per feature; PR to main
