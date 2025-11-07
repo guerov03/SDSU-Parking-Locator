@@ -1,6 +1,6 @@
 # SDSU Parking Locator
 
-A small class project to show SDSU parking lot availability.
+A small class project designed for SDSU students to find parking lot availability.
 
 ## Structure
 - `frontend/` — React UI (map, lot list, lot details)
@@ -9,11 +9,11 @@ A small class project to show SDSU parking lot availability.
 ## Getting Started (Cloning files to your computer)
 
 ## Option 1: GitHub Desktop
-- From this screen, click on the "code" section on the top left
-- Click on the green "code" button, then "open with GitHub Desktop"
+- From this screen, click on the "**code**" section on the top left
+- Click on the green "**code**" button, then "**open with GitHub Desktop**"
 - Install GitHub Desktop and launch it
 - Try step 2 again
-- Choose a place to save the folder, then click Clone. 
+- Choose a place to save the folder, then click **Clone**. 
 
   
 ### Option 2: Command Line (Git installed)
@@ -21,6 +21,11 @@ A small class project to show SDSU parking lot availability.
 git clone https://github.com/<guerov03>/SDSU-Parking-Locator.git
 cd SDSU-Parking-Locator
 ```
+- Make sure that you navigate to frontend or backend folder with:
+  
+cd git "reactfrontend/[insert which end] folder/.." before running
+npm run dev
+
 ## Updating project (after first clone)
 
 ### GitHub Desktop
@@ -31,3 +36,4 @@ cd SDSU-Parking-Locator
 ### Command Line
 ```bash
 git pull
+
